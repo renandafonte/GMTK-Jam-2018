@@ -8,28 +8,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: dc234ab28a32840f5adfb84a075bc023, type: 3}
   m_Name: InkLibrary
-  m_EditorClassIdentifier: Assembly-CSharp-Editor-firstpass:Ink.UnityIntegration:InkLibrary
+  m_EditorClassIdentifier: 
   inkLibrary:
-  - compileAutomatically: 0
-    inkAsset: {fileID: 102900000, guid: 1460e815e969b43b8a83a7caa8b48c27, type: 3}
-    jsonAssetPath: {fileID: 0}
-    jsonAsset: {fileID: 4900000, guid: 6cf48bb6d89824cc69e35b43f9a1aca6, type: 3}
   - compileAutomatically: 0
     inkAsset: {fileID: 102900000, guid: 7acc118833c0c7342bb654e9fe78bc47, type: 3}
     jsonAssetPath: {fileID: 0}
     jsonAsset: {fileID: 4900000, guid: 7cb99bbfbf05a0845aa65abaa9a2fff2, type: 3}
+  - compileAutomatically: 0
+    inkAsset: {fileID: 102900000, guid: 1460e815e969b43b8a83a7caa8b48c27, type: 3}
+    jsonAssetPath: {fileID: 0}
+    jsonAsset: {fileID: 0}
+  - compileAutomatically: 0
+    inkAsset: {fileID: 102900000, guid: 49e83a2b69633d341a68baaf249c1510, type: 3}
+    jsonAssetPath: {fileID: 0}
+    jsonAsset: {fileID: 0}
   pendingCompilationStack: []
-  compilationStack:
-  - state: 1
-    inkFile:
-      compileAutomatically: 0
-      inkAsset: {fileID: 102900000, guid: 7acc118833c0c7342bb654e9fe78bc47, type: 3}
-      jsonAssetPath: {fileID: 0}
-      jsonAsset: {fileID: 4900000, guid: 7cb99bbfbf05a0845aa65abaa9a2fff2, type: 3}
-    inkAbsoluteFilePath: C:/Users/Lilo/Documents/RPG/GMTK-Jam-2018/GameJam-GMTK-2018/Assets/Data/Teste.ink
-    jsonAbsoluteFilePath: C:/Users/Lilo/Documents/RPG/GMTK-Jam-2018/GameJam-GMTK-2018/Assets/Data/Teste.json
-    output: []
-    errorOutput: []
-    timeTaken: 0
+  compilationStack: []
