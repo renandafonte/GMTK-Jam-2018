@@ -9,6 +9,7 @@ public class SceneTrigger : MonoBehaviour {
 	// Use this for initialization
 	void OnTriggerEnter()
 	{
+		Debug.Log(NextScene);
 		SceneManager.LoadScene(NextScene);
 	}
 
