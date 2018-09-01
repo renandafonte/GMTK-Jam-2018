@@ -11,7 +11,6 @@ public class InkTextObject : MonoBehaviour {
 
     private void Start()
     {
-        
     }
 
     private void Update()
@@ -36,9 +35,13 @@ public class InkTextObject : MonoBehaviour {
 			string text = _story.Continue(); //continua história enquanto possível
 			TextManager.instance.UpdateText(text); //muda texto
             myTagString = _story.currentTags;
-            Debug.Log(_story.currentTags);
-            Debug.Log(myTagString[0]);
 
+            //Debug.Log(_story.currentTags);
+            if (myTagString.Count > 0)
+            {
+                Debug.Log(myTagString[0]);
+                tocaPlay(myTagString[0]);
+            }
         }
 	}
 
@@ -73,7 +76,7 @@ public class InkTextObject : MonoBehaviour {
 
     public void tocaPlay(string audioNom)
     {
-        AudioSource audio = GetComponent<AudioSource>();
+        AudioSource audio = GetComponent(audioNom) as AudioSource;
         audio.Play();
     }
 }
