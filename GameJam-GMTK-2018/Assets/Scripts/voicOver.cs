@@ -15,10 +15,16 @@ public class voicOver : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Entrou Trigger");
         if (other.CompareTag("Player"))
         {
             audioVoice.Play();
             textSubs.CallText();
         }
+    }
+
+    void tocaPlay()
+    {
+        audioVoice.Play();
     }
 }
