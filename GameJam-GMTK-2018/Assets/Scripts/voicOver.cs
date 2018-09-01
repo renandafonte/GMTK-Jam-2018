@@ -6,6 +6,7 @@ using UnityEngine;
 public class voicOver : MonoBehaviour {
 
     private AudioSource audioVoice;
+    public ShowInkText textSubs;
 
     private void Awake()
     {
@@ -17,6 +18,7 @@ public class voicOver : MonoBehaviour {
         if (other.CompareTag("Player"))
         {
             audioVoice.Play();
+            textSubs.CallText();
         }
     }
 }
