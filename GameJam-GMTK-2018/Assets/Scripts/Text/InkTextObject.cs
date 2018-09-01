@@ -7,21 +7,7 @@ public class InkTextObject : MonoBehaviour {
 	public TextAsset JsonFromInk;
 	private Story _story;
     List<string> myTagString;
-    private AudioSource audioVoice;
-
-    private void Start()
-    {
-    }
-
-    private void Update()
-    {
-        /*string myText = _story.Continue();
-        List<string> myTagString = _story.currentTags;
-        string speakerAudioLine = myTagString[0];
-
-        if (Input.GetKeyDown("space"))
-            Debug.Log(speakerAudioLine);*/
-    }
+    string tagTemp = "";
 
     public void CallText(){
 		//Inicia classe story (veio do plugin do ink)
@@ -36,10 +22,20 @@ public class InkTextObject : MonoBehaviour {
 			TextManager.instance.UpdateText(text); //muda texto
             myTagString = _story.currentTags;
 
-            //Debug.Log(_story.currentTags);
             if (myTagString.Count > 0)
             {
-                Debug.Log(myTagString[0]);
+                if (tagTemp == "")
+                    tagTemp = myTagString[0];
+                else
+                {
+                    if (tagTemp != myTagString[0])
+                    {
+                        tocaPlayStop(tagTemp);
+                        tagTemp = myTagString[0];
+                    }
+                }
+                
+                //Debug.Log(myTagString[0]);
                 tocaPlay(myTagString[0]);
             }
         }
@@ -76,7 +72,15 @@ public class InkTextObject : MonoBehaviour {
 
     public void tocaPlay(string audioNom)
     {
-        AudioSource audio = GetComponent(audioNom) as AudioSource;
+        //Debug.Log(audioNom);
+        AudioSource audio = GameObject.Find(audioNom).GetComponent<AudioSource>();
+        //Debug.Log(audio);
         audio.Play();
+    }
+
+    public void tocaPlayStop(string audioNom)
+    {
+        AudioSource audio = GameObject.Find(audioNom).GetComponent<AudioSource>();
+        audio.Stop();
     }
 }
