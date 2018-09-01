@@ -1,10 +1,10 @@
 Comeco
 
-* [Testa Função] -> som
++ [default] -> som
 
 ==som==
-# speaker
-Vai tocar algo -> fim
+Vai tocar algo #speaker2
++ [default] -> fim
 
 ==fim==
 ->DONE
