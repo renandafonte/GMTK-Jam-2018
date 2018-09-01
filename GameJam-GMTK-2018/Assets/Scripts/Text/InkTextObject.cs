@@ -42,15 +42,28 @@ public class InkTextObject : MonoBehaviour {
         }
 	}
 
-	public void ChooseChoice(int index){
-		_story.ChooseChoiceIndex(index);
+	public void ChooseChoice(string name){
+		_story.ChooseChoiceIndex(SearchChoice("default"));
 		AdvanceStory();
+	}
+
+	public int SearchChoice(string name){
+		if(_story.currentChoices.Find(choice => choice.text == name) == null) return -1; //se story não tem choices
+
+
+		return _story.currentChoices.Find(choice => choice.text == name).index;
 	}
 
 	public void OnMouseDown(){
 		switch(TextManager.instance.DialogObj.IsActive()){
 			case true:
-				AdvanceStory();
+				int index = SearchChoice("default");
+				Debug.Log(index);
+				if(_story.currentChoices.Count > 0 && index != -1){
+					_story.ChooseChoiceIndex(index); //se estiver escolhas muda o texto
+					AdvanceStory();
+				} 
+				else TextManager.instance.SetTextActive(false); //senão diálogo acabou
 				break;
 			case false:
 				CallText();
