@@ -3,7 +3,8 @@ guid: cb3c984b28bed2341916248069f60c08
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - JsonFromInk: {fileID: 4900000, guid: 7cb99bbfbf05a0845aa65abaa9a2fff2, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

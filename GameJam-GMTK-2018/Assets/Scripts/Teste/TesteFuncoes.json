@@ -1,0 +1,1 @@
+﻿{"inkVersion":18,"root":[["^Comeco","\n","ev","str","^Testa Função","/str","/ev",{"*":"0.c-0","flg":20},{"c-0":["^ ",{"->":"som"},"\n",{"->":"0.g-0"},{"#f":7}],"g-0":["done",{"#f":7}]}],"done",{"som":[{"#":"speaker"},"^Vai tocar algo ",{"->":"fim"},"\n",{"#f":3}],"fim":["done",{"#f":3}],"#f":3}],"listDefs":{}}
