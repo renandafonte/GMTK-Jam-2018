@@ -6,7 +6,7 @@ using UnityEngine;
 public class voicOver : MonoBehaviour {
 
     private AudioSource audioVoice;
-    public ShowInkText textSubs;
+    public InkTextObject textSubs;
 
     private void Awake()
     {
