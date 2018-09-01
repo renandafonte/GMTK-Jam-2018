@@ -10,7 +10,4 @@ public class ChoiceTrigger : MonoBehaviour {
 		Object.ChooseChoice(ChoiceName);
 	}
 
-	public void OnMouseDown(){
-		OnTriggerEnter();
-	}
 }
