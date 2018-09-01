@@ -9,15 +9,6 @@ public class InkTextObject : MonoBehaviour {
     List<string> myTagString;
     string tagTemp = "";
 
-    private void Start()
-    {
-    }
-
-    private void Update()
-    {
-
-    }
-
     public void CallText(){
 		//Inicia classe story (veio do plugin do ink)
 		_story = new Story(JsonFromInk.text);
@@ -31,7 +22,6 @@ public class InkTextObject : MonoBehaviour {
 			TextManager.instance.UpdateText(text); //muda texto
             myTagString = _story.currentTags;
 
-            //Debug.Log(_story.currentTags);
             if (myTagString.Count > 0)
             {
                 if (tagTemp == "")
@@ -45,7 +35,7 @@ public class InkTextObject : MonoBehaviour {
                     }
                 }
                 
-                Debug.Log(myTagString[0]);
+                //Debug.Log(myTagString[0]);
                 tocaPlay(myTagString[0]);
             }
         }
@@ -82,11 +72,9 @@ public class InkTextObject : MonoBehaviour {
 
     public void tocaPlay(string audioNom)
     {
-        Debug.Log(audioNom);
-        /*if (audio != null)
-            audio.Stop();*/
+        //Debug.Log(audioNom);
         AudioSource audio = GameObject.Find(audioNom).GetComponent<AudioSource>();
-        Debug.Log(audio);
+        //Debug.Log(audio);
         audio.Play();
     }
 
