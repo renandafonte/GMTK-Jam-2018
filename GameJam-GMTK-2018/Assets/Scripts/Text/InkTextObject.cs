@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
 
-public class ShowInkText : MonoBehaviour {
+public class InkTextObject : MonoBehaviour {
 	public TextAsset JsonFromInk;
 	private Story _story;
 
@@ -21,7 +21,19 @@ public class ShowInkText : MonoBehaviour {
 		}
 	}
 
+	public void ChooseChoice(int index){
+		_story.ChooseChoiceIndex(index);
+		AdvanceStory();
+	}
+
 	public void OnMouseDown(){
-		CallText();
+		switch(TextManager.instance.DialogObj.IsActive()){
+			case true:
+				AdvanceStory();
+				break;
+			case false:
+				CallText();
+				break;
+		}
 	}
 }
