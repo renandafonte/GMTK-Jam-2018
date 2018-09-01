@@ -113,6 +113,60 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &134644551
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 1e49f9a0c64979e4a8e760390ec4ea26, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1370
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1e49f9a0c64979e4a8e760390ec4ea26, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1e49f9a0c64979e4a8e760390ec4ea26, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1240
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1e49f9a0c64979e4a8e760390ec4ea26, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1e49f9a0c64979e4a8e760390ec4ea26, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1e49f9a0c64979e4a8e760390ec4ea26, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1e49f9a0c64979e4a8e760390ec4ea26, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1e49f9a0c64979e4a8e760390ec4ea26, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1e49f9a0c64979e4a8e760390ec4ea26, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.9721
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1e49f9a0c64979e4a8e760390ec4ea26, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.9721
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1e49f9a0c64979e4a8e760390ec4ea26, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6.9721
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1e49f9a0c64979e4a8e760390ec4ea26, type: 3}
+  m_IsPrefabAsset: 0
 --- !u!1001 &250751829
 Prefab:
   m_ObjectHideFlags: 0
