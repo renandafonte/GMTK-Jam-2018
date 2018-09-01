@@ -12,11 +12,6 @@ MonoBehaviour:
   m_Name: Default
   m_EditorClassIdentifier: 
   prefabs:
-  - gameObject: {fileID: 1076091655226626, guid: 0f7a59f7d810bed469e5461a68d90620,
-      type: 2}
-    settings:
-      rotationRange: {x: 0, y: 0}
-      scaleRange: {x: 0, y: 0}
   - gameObject: {fileID: 1384432307923746, guid: 41bfcfe6e309e30459fc88210c5e2dca,
       type: 2}
     settings:
