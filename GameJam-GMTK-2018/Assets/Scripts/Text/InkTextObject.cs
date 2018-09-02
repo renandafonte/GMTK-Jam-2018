@@ -58,10 +58,11 @@ public class InkTextObject : MonoBehaviour {
 			string text = _story.Continue(); //continua história enquanto possível
 			TextManager.instance.UpdateText(text); //muda texto
             myTagString = _story.currentTags;
-
             for (int i = 0; i < myTagString.Count; i++)
             {
 				if(myTagString[i].Contains("som")){
+                    tocaPlay(myTagString[0]);
+                    //Debug.Log(GetTagArgument(myTagString[0]));
 					if (tagTemp == "")
 						tagTemp = GetTagArgument(myTagString[i]);
 					else
@@ -74,7 +75,7 @@ public class InkTextObject : MonoBehaviour {
 					}
 					
 					//Debug.Log(myTagString[0]);
-					tocaPlay(GetTagArgument(myTagString[i]));
+					//tocaPlay(myTagString[0]);
 				}
 
 				else if(myTagString[i].Contains("scene")){
@@ -155,9 +156,9 @@ public class InkTextObject : MonoBehaviour {
 
     public void tocaPlay(string audioNom)
     {
-        //Debug.Log(audioNom);
+        Debug.Log(audioNom);
         AudioSource audio = GameObject.Find(audioNom).GetComponent<AudioSource>();
-        //Debug.Log(audio);
+        Debug.Log(audio);
         audio.Play();
     }
 
