@@ -1,4 +1,4 @@
-... #som : "N2"
+... #som : "N2" #tempo: "1"
 + [default] -> PART2
 
 === PART2 ===
