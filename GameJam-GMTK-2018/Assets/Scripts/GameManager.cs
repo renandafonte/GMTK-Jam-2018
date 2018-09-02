@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine.Audio;
 using UnityEngine;
+<<<<<<< HEAD
 using UnityStandardAssets.Characters.FirstPerson;
+=======
+using UnityEngine.SceneManagement;
+>>>>>>> ff73196a846c57343fdf5458be0c43429e676c6d
 
 public class GameManager : MonoBehaviour {
 	public int GameChapter = 0;
@@ -13,8 +17,29 @@ public class GameManager : MonoBehaviour {
     public InkTextObject inkText;
 
 
+	public static GameManager instance;
+
 	void Awake(){
 		DontDestroyOnLoad(gameObject);
+
+		//Se já houver um gamemanager, destrói esse. 
+		//isso deixa a gente por em todas as cenas, sem se preocupar com duplicados
+		if(instance == null) instance = this;
+		else Destroy(gameObject);
+		
+        SceneManager.sceneLoaded += OnSceneLoaded;
+	}
+
+	void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+		GameChapter++;
+
+		switch(GameChapter){
+			case 2:
+				var obj = GameObject.Find("Managers").GetComponent<InkTextObject>();
+				obj.JsonFromInk = obj.NextJsons[0];
+				break;
+		}
 	}
 
     void Update()
