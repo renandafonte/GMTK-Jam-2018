@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour {
     public float volume;
     public FirstPersonController FPC;
     public InkTextObject inkText;
-
+    public AudioSource PauseSound;
 
 	public static GameManager instance;
 
@@ -82,6 +82,7 @@ public class GameManager : MonoBehaviour {
     public void Resume()
     {
         Debug.Log("resume");
+        PauseSound.Play();
         pauseMenu.SetActive(false);
         FPC.disableFPC(true);
         inkText.disableInk(true);
@@ -91,7 +92,8 @@ public class GameManager : MonoBehaviour {
 
     void Pause()
     {
-      //Cursor.visible = true;
+        //Cursor.visible = true;
+        PauseSound.Play();
         pauseMenu.SetActive(true);
         FPC.disableFPC(false);
         inkText.disableInk(false);
