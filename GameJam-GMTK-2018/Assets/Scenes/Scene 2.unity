@@ -1139,7 +1139,6 @@ GameObject:
   m_Component:
   - component: {fileID: 876681651}
   - component: {fileID: 876681652}
-  - component: {fileID: 876681653}
   m_Layer: 0
   m_Name: Audios
   m_TagString: Untagged
@@ -1178,20 +1177,6 @@ MonoBehaviour:
     type: 2
   - source: {fileID: 245579604}
     type: 1
---- !u!114 &876681653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 876681650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dccda41269b81e04dbc2a9ad3abd9dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BGMVolume: 1
-  SFXVolume: 1
-  ambientVolume: 1
 --- !u!1 &886755163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1594,7 +1579,7 @@ Prefab:
     - target: {fileID: 114668638485839704, guid: fa676bb7f3b26c647b4c94d93d3e3070,
         type: 2}
       propertyPath: GameChapter
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114668638485839704, guid: fa676bb7f3b26c647b4c94d93d3e3070,
         type: 2}
