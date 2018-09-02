@@ -71,7 +71,8 @@ public class GameManager : MonoBehaviour {
         Debug.Log("resume");
         GameObject.Find("Pause Menu Audio").GetComponent<AudioSource>().Play();
         pauseMenu.SetActive(false);
-        GameObject.Find("FPSController").GetComponent<FirstPersonController>().disableFPC(true);
+        FirstPersonController fpc = GameObject.Find("FPSController").GetComponent<FirstPersonController>();
+        fpc.disableFPC(true);
         if(inkText != null) inkText.disableInk(true);
         Time.timeScale = 1f;
 
