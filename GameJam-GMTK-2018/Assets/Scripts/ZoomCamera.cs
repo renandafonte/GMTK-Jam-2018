@@ -13,7 +13,12 @@ public class ZoomCamera : MonoBehaviour {
 
 	private int step = 0; //0 é zoom in, 1 é mantém, 2 é zoom out
 
-	void OnEnable(){
+    private void Start()
+    {
+        //GameObject player = GameObject.Find("FPSController");
+    }
+
+    void OnEnable(){
 		StartCoroutine(ControlStep());
 	}
 
@@ -26,6 +31,9 @@ public class ZoomCamera : MonoBehaviour {
 				ZoomOut();
                 break;
 		}
+
+        
+            
 	}
 	void ZoomOut () {
         if(Camera.current.fieldOfView <= 60.0)
@@ -45,4 +53,6 @@ public class ZoomCamera : MonoBehaviour {
 		yield return new WaitForSeconds(durationZoomOut);
 		this.enabled = false;
 	}
+
+    
 }

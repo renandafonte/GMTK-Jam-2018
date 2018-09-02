@@ -13,6 +13,13 @@ public class GameManager : MonoBehaviour {
   //public AudioMixer audioSom;
     public InkTextObject inkText;
 
+    Vector3 pos = new Vector3(534.574f, 1.195339f, 617.7256f);
+    Vector3 rot = new Vector3(0, -93.3f, 0);
+    Vector3 posCam = new Vector3(0.001886987f, 0.8f, 0f);
+    Vector3 rotCam = new Vector3(20.5f, 0, 0);
+    public GameObject player;
+    public GameObject playerCamera;
+
     public int TextSize = 18;
 
 	public static GameManager instance;
@@ -67,6 +74,11 @@ public class GameManager : MonoBehaviour {
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            Debug.Log("Transport");
+            instantTranport(pos);
+        }
     }
 
     private void Start()
@@ -112,4 +124,16 @@ public class GameManager : MonoBehaviour {
         Application.Quit();
     }
 
+    public void instantTranport(Vector3 pos)
+    {
+        Debug.Log("PLayer" + player);
+        Debug.Log("pos" + pos);
+        Debug.Log(player.transform.position);
+        player.transform.position = pos;
+        player.transform.rotation = Quaternion.Euler(rot);
+        playerCamera.transform.position = posCam;
+        playerCamera.transform.rotation = Quaternion.Euler(rotCam);
+        Debug.Log(player.transform.position);
+        //jog.transform.rotation = -90f;
+    }
 }
