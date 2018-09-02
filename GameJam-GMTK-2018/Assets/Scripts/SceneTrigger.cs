@@ -13,14 +13,6 @@ public class SceneTrigger : MonoBehaviour {
 		SceneManager.LoadScene(NextScene);
 	}
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.E))
-        {
-            SceneManager.LoadScene(NextScene);
-        }
-    }
-
     public void loadScene()
     {
         SceneManager.LoadScene(NextScene);
