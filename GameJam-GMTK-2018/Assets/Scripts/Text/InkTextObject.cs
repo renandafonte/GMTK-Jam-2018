@@ -12,6 +12,11 @@ public class InkTextObject : MonoBehaviour {
 	public bool repeat = false;
 	private bool hasEnded = false;
 
+	public bool triggeredByObject = false;
+
+	public float TimeBeforePlayerIsAbleToSkipText = 1f;
+	private bool isPlayerAbleToSkipText = true;
+
     public void CallText(){
 		//Inicia classe story (veio do plugin do ink)
 		_story = new Story(JsonFromInk.text);
@@ -57,6 +62,20 @@ public class InkTextObject : MonoBehaviour {
 	}
 
 	public void OnMouseDown(){
+		if(triggeredByObject) InteractWithText();
+	}
+
+	public void Start(){
+		if(!triggeredByObject) InteractWithText();
+	}
+
+	public void Update(){
+		if(Input.GetMouseButton(0) && !triggeredByObject) InteractWithText();
+	}
+
+	public void InteractWithText(){
+		if(!isPlayerAbleToSkipText) return;
+
 		switch(TextManager.instance.DialogObj.IsActive()){
 			case true:
 				int index = SearchChoice("default");
@@ -74,6 +93,8 @@ public class InkTextObject : MonoBehaviour {
 				if(!hasEnded || repeat) CallText();
 				break;
 		}
+
+		StartCoroutine(SkipTextCooldown());
 	}
 
     public void tocaPlay(string audioNom)
@@ -89,4 +110,10 @@ public class InkTextObject : MonoBehaviour {
         AudioSource audio = GameObject.Find(audioNom).GetComponent<AudioSource>();
         audio.Stop();
     }
+
+	IEnumerator SkipTextCooldown(){
+		isPlayerAbleToSkipText = false;
+		yield return new WaitForSeconds(TimeBeforePlayerIsAbleToSkipText);
+		isPlayerAbleToSkipText = true;
+	}
 }
