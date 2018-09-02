@@ -20,4 +20,14 @@ public class SceneTrigger : MonoBehaviour {
             SceneManager.LoadScene(NextScene);
         }
     }
+
+    public void loadScene()
+    {
+        SceneManager.LoadScene(NextScene);
+    }
+
+    public void sceneQuit()
+    {
+        Application.Quit();
+    }
 }
