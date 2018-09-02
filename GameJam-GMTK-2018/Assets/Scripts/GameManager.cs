@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour {
     public int TextSize = 18;
 
 	public static GameManager instance;
+    [HideInInspector] public int lastChapter;
 
 	void Awake(){
 		DontDestroyOnLoad(gameObject);
@@ -40,6 +41,9 @@ public class GameManager : MonoBehaviour {
         if(SoundManager.instance != null) SoundManager.instance.UpdateAudioList();
 
 		GameChapter++;
+
+        if(GameChapter == 6) GameChapter = lastChapter; //decide o final
+
         InkTextObject obj;
         CanvasInfo c = GameObject.Find("Canvas").GetComponent<CanvasInfo>();
         pauseMenu = c.Pause;
