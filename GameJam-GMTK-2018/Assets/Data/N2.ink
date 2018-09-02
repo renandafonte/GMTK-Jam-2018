@@ -2,7 +2,7 @@
 + [default] -> PART2
 
 === PART2 ===
-Alright, look, #tempo: "2"
+Alright, look, #tempo: "2" #som : "N2"
 + [default] -> PART3
 
 === PART3 ===
