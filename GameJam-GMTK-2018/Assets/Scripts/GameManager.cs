@@ -59,6 +59,13 @@ public class GameManager : MonoBehaviour {
                 Resume();
         }
 
+        //jogo está pausado
+        if(Time.timeScale == 0f){
+            if(Input.GetKeyDown(KeyCode.Q)){
+                sceneQuit();
+            }
+        }
+
     }
 
     private void Start()
