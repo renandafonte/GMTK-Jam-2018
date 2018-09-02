@@ -59,37 +59,37 @@ public class InkTextObject : MonoBehaviour {
 			TextManager.instance.UpdateText(text); //muda texto
             myTagString = _story.currentTags;
 
-            if (myTagString.Count > 0)
+            for (int i = 0; i < myTagString.Count; i++)
             {
-				if(myTagString[0].Contains("som")){
+				if(myTagString[i].Contains("som")){
 					if (tagTemp == "")
-						tagTemp = GetTagArgument(myTagString[0]);
+						tagTemp = GetTagArgument(myTagString[i]);
 					else
 					{
-						if (tagTemp != GetTagArgument(myTagString[0]))
+						if (tagTemp != GetTagArgument(myTagString[i]))
 						{
 							tocaPlayStop(tagTemp);
-							tagTemp = GetTagArgument(myTagString[0]);
+							tagTemp = GetTagArgument(myTagString[i]);
 						}
 					}
 					
 					//Debug.Log(myTagString[0]);
-					tocaPlay(GetTagArgument(myTagString[0]));
+					tocaPlay(GetTagArgument(myTagString[i]));
 				}
 
-				else if(myTagString[0].Contains("scene")){
-					SceneManager.LoadScene(GetTagArgument(myTagString[0]));
+				else if(myTagString[i].Contains("scene")){
+					SceneManager.LoadScene(GetTagArgument(myTagString[i]));
 				}
 
-				else if(myTagString[0].Contains("zoom")){
-					Debug.Log("TODO ZOOM");
+				else if(myTagString[i].Contains("zoom")){
+					camera.current.gameObject.AddComponent<ZoomCamera>();
 				}
 
-				else if(myTagString[0].Contains("lockcam")){
+				else if(myTagString[i].Contains("lockcam")){
 					Debug.Log("TODO LOCKCAM");
 				}
 
-				else if(myTagString[0].Contains("showButton")){
+				else if(myTagString[i].Contains("showButton")){
 					GameManager.instance.ShowButton(true);
 				}
             }
