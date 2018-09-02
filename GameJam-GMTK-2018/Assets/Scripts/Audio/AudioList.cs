@@ -6,7 +6,8 @@ public class AudioList : MonoBehaviour {
 	public enum AudioType{
 		BGM,
 		SFX,
-		Ambient
+		Ambient,
+		Voice
 	}
 
 	[System.Serializable]
