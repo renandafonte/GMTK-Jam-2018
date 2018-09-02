@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour {
-	public float BGMVolume = 1f, SFXVolume = 1f, ambientVolume = 1f;
+	public float BGMVolume = 1f, SFXVolume = 1f, ambientVolume = 1f, voiceVolume = 1f;
 	public static SoundManager instance;
 
 	private AudioList audioList;
@@ -24,6 +24,7 @@ public class SoundManager : MonoBehaviour {
 		BGMVolume = slider.value;
 		SFXVolume = slider.value;
 		ambientVolume = slider.value;
+		voiceVolume = slider.value;
 
 		UpdateAudios();
 	}
@@ -37,6 +38,10 @@ public class SoundManager : MonoBehaviour {
 	}
 	public void OnAmbientVolumeChange(Slider slider){
 		ambientVolume = slider.value;
+		UpdateAudios();
+	}
+	public void OnVoiceVolumeChange(Slider slider){
+		voiceVolume = slider.value;
 		UpdateAudios();
 	}
 
@@ -60,6 +65,10 @@ public class SoundManager : MonoBehaviour {
 				case AudioList.AudioType.Ambient:
 					volume = ambientVolume;
 					break;
+				case AudioList.AudioType.Voice:
+					volume = voiceVolume;
+					break;
+
 			}
 
 			audio.source.volume = volume;
