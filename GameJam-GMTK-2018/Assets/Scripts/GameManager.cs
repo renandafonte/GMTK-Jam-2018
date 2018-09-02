@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine.Audio;
 using UnityEngine;
-<<<<<<< HEAD
 using UnityStandardAssets.Characters.FirstPerson;
-=======
 using UnityEngine.SceneManagement;
->>>>>>> ff73196a846c57343fdf5458be0c43429e676c6d
+
 
 public class GameManager : MonoBehaviour {
 	public int GameChapter = 0;
