@@ -37,29 +37,6 @@ public class GameManager : MonoBehaviour {
         pauseMenu.SetActive(false);
         FirstPersonController fpc = c.fpc;
         InkTextObject ink = c.inkText;
-		switch(GameChapter){
-			case 3:
-				obj = GameObject.Find("Managers").GetComponent<InkTextObject>();
-				obj.JsonFromInk = obj.NextJsons[0];
-				break;
-            case 4:
-				obj = GameObject.Find("Cube").GetComponent<InkTextObject>();
-				obj.JsonFromInk = obj.NextJsons[0];
-                break;
-            case 5:
-				obj = GameObject.Find("Managers").GetComponent<InkTextObject>();
-				obj.JsonFromInk = obj.NextJsons[1];
-                Debug.Log(obj.NextJsons[1]);
-                break;
-            case 6:
-				obj = GameObject.Find("Cube").GetComponent<InkTextObject>();
-				obj.JsonFromInk = obj.NextJsons[1];
-                break;
-            case 7:
-				obj = GameObject.Find("Cube").GetComponent<InkTextObject>();
-				obj.JsonFromInk = obj.NextJsons[2];
-                break;
-		}
 	}
 
     void Update()
