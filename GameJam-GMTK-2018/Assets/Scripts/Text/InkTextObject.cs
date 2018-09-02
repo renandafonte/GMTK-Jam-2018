@@ -65,7 +65,7 @@ public class InkTextObject : MonoBehaviour {
             for (int i = 0; i < myTagString.Count; i++)
             {
 				if(myTagString[i].Contains("som")){
-                    //tocaPlay(myTagString[0]);
+                    tocaPlay(NomeAudio(myTagString[0]));
                     //Debug.Log(GetTagArgument(myTagString[0]));
 					if (tagTemp == "")
 						tagTemp = GetTagArgument(myTagString[i]);
@@ -206,5 +206,25 @@ public class InkTextObject : MonoBehaviour {
     public void disableInk(bool x)
     {
         GetComponent<InkTextObject>().enabled = x;
+    }
+
+    private string NomeAudio(string arquiv)
+    {
+        if (arquiv.Contains("N1"))
+            return "N1";
+        else if (arquiv.Contains("N2"))
+            return "N2";
+        else if (arquiv.Contains("N3"))
+            return "N3";
+        else if (arquiv.Contains("N4"))
+            return "N4";
+        else if (arquiv.Contains("N5"))
+            return "N5";
+        else if (arquiv.Contains("N6"))
+            return "N6";
+        else if (arquiv.Contains("N7"))
+            return "N7";
+        else
+            return null;
     }
 }
