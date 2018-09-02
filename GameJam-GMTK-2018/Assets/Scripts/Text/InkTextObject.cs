@@ -22,7 +22,30 @@ public class InkTextObject : MonoBehaviour {
 
     public void CallText(){
 		//Inicia classe story (veio do plugin do ink)
-		_story = new Story(JsonFromInk.text);
+		Debug.Log(GameManager.instance.GameChapter);
+		switch(GameManager.instance.GameChapter){
+			case 1:
+				_story = new Story(JsonFromInk.text);
+				break;
+			case 2:
+				_story = new Story(JsonFromInk.text);
+				break;
+			case 3:
+				_story = new Story(NextJsons[0].text);
+				break;
+			case 4:
+				_story = new Story(NextJsons[0].text);
+				break;
+			case 5:
+				_story = new Story(NextJsons[1].text);
+				break;
+			case 6:
+				_story = new Story(NextJsons[1].text);
+				break;
+			case 7:
+				_story = new Story(NextJsons[2].text);
+				break;
+		}
 		TextManager.instance.SetTextActive(true); //ativa a caixa de texto
 		AdvanceStory();
 	}
