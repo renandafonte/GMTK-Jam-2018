@@ -18,6 +18,8 @@ public class InkTextObject : MonoBehaviour {
 	public float TimeBeforePlayerIsAbleToSkipText = 1f;
 	private bool isPlayerAbleToSkipText = true;
 
+	public List<TextAsset> NextJsons;
+
     public void CallText(){
 		//Inicia classe story (veio do plugin do ink)
 		_story = new Story(JsonFromInk.text);
@@ -51,6 +53,14 @@ public class InkTextObject : MonoBehaviour {
 
 				else if(myTagString[0].Contains("scene")){
 					SceneManager.LoadScene(GetTagArgument(myTagString[0]));
+				}
+
+				else if(myTagString[0].Contains("zoom")){
+					Debug.Log("TODO ZOOM");
+				}
+
+				else if(myTagString[0].Contains("lockcam")){
+					Debug.Log("TODO LOCKCAM");
 				}
             }
         }
@@ -127,4 +137,9 @@ public class InkTextObject : MonoBehaviour {
 		yield return new WaitForSeconds(TimeBeforePlayerIsAbleToSkipText);
 		isPlayerAbleToSkipText = true;
 	}
+
+    public void disableInk(bool x)
+    {
+        GetComponent<InkTextObject>().enabled = x;
+    }
 }
