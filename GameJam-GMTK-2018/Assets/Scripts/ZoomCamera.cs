@@ -9,6 +9,7 @@ public class ZoomCamera : MonoBehaviour {
 	public float durationBreak = 2;
 	public float speedZoomOut = 1.5f;
 	public float durationZoomOut = 3;
+    public float maxZoom = 30;
 
 	private int step = 0; //0 é zoom in, 1 é mantém, 2 é zoom out
 
@@ -19,19 +20,21 @@ public class ZoomCamera : MonoBehaviour {
 	void Update(){
 		switch(step){
 			case 0:
-				ZoomIn();
-				break;
+                ZoomIn();
+                break;
 			case 2:
 				ZoomOut();
-				break;
+                break;
 		}
 	}
-	void ZoomIn () {
-		Camera.current.fieldOfView += speedZoomIn;
+	void ZoomOut () {
+        if(Camera.current.fieldOfView <= 60.0)
+            Camera.current.fieldOfView += speedZoomIn;
 	}
 	
-	void ZoomOut () {
-		Camera.current.fieldOfView -= speedZoomOut;	
+	void ZoomIn () {
+        if (Camera.current.fieldOfView >= maxZoom)
+            Camera.current.fieldOfView -= speedZoomOut;	
 	}
 
 	IEnumerator ControlStep(){
