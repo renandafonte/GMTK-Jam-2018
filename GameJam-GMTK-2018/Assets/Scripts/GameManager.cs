@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour {
     public GameObject pauseMenu;
     public GameObject settingsMenu;
   //public AudioMixer audioSom;
-    public float volume;
     public InkTextObject inkText;
 
     Vector3 pos = new Vector3(534.574f, 1.195339f, 617.7256f);

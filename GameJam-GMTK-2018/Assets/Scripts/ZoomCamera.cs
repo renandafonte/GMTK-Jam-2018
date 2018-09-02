@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class ZoomCamera : MonoBehaviour {
 	public Transform target;
-	public float speedZoomIn = 1.5f;
+	public float speedZoomIn = 15f;
 	public float durationZoomIn = 3;
-	public float durationBreak = 2;
-	public float speedZoomOut = 1.5f;
+	public float speedZoomOut = 15f;
 	public float durationZoomOut = 3;
     public float maxZoom = 30;
 
@@ -49,11 +48,12 @@ public class ZoomCamera : MonoBehaviour {
 	IEnumerator ControlStep(){
 		yield return new WaitForSeconds(durationZoomIn);
 		step++;
-		yield return new WaitForSeconds(durationBreak);
-		step++;
+		yield return new WaitUntil(() => step == 2);
 		yield return new WaitForSeconds(durationZoomOut);
 		this.enabled = false;
 	}
 
-    
+    public void StartZoomOut(){
+		step++;
+	}
 }
