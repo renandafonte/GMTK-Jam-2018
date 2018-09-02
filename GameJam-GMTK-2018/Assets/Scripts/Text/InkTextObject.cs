@@ -19,7 +19,7 @@ public class InkTextObject : MonoBehaviour {
 	private bool isPlayerAbleToSkipText = true;
 
 	public List<TextAsset> NextJsons;
-
+	public GameObject Credits;
     public void CallText(){
 		//Inicia classe story (veio do plugin do ink)
 		Debug.Log(GameManager.instance.GameChapter);
@@ -131,6 +131,10 @@ public class InkTextObject : MonoBehaviour {
 				else{
 					TextManager.instance.SetTextActive(false); //senão diálogo acabou
 					hasEnded = true;
+
+					if(GameManager.instance.GameChapter == 6 || GameManager.instance.GameChapter == 7){
+						Credits.SetActive(true);
+					}
 				} 
 				break;
 			case false:
