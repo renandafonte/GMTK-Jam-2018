@@ -74,6 +74,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4272525394034402}
   - component: {fileID: 205378291506657200}
+  - component: {fileID: 136145475454376150}
   m_Layer: 0
   m_Name: Tree 3
   m_TagString: Untagged
@@ -299,6 +300,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1001573174067710}
   m_Mesh: {fileID: 4300004, guid: 43590114d6634324cab4c8132715e575, type: 3}
+--- !u!136 &136145475454376150
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1496249050794776}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.98
+  m_Height: 15.96
+  m_Direction: 1
+  m_Center: {x: -1.29, y: 6.17, z: -0.71}
 --- !u!193 &193062719796224596
 Tree:
   m_ObjectHideFlags: 1
