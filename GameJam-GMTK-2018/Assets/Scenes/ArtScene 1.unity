@@ -1769,7 +1769,12 @@ Prefab:
     - target: {fileID: 198358448420133328, guid: 74c403d503f771c45b8eec28e474e8c4,
         type: 2}
       propertyPath: InitialModule.startColor.maxColor.a
-      value: 0.1254902
+      value: 0.15294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 198358448420133328, guid: 74c403d503f771c45b8eec28e474e8c4,
+        type: 2}
+      propertyPath: InitialModule.startColor.minColor.a
+      value: 0.003921569
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74c403d503f771c45b8eec28e474e8c4, type: 2}
@@ -26384,6 +26389,11 @@ Prefab:
       propertyPath: InitialModule.startColor.maxColor.a
       value: 0.1254902
       objectReference: {fileID: 0}
+    - target: {fileID: 198358448420133328, guid: 74c403d503f771c45b8eec28e474e8c4,
+        type: 2}
+      propertyPath: InitialModule.startColor.minColor.a
+      value: 0.003921569
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74c403d503f771c45b8eec28e474e8c4, type: 2}
   m_IsPrefabAsset: 0
@@ -28457,7 +28467,7 @@ Prefab:
     - target: {fileID: 224572348339932090, guid: 6c2b8ee08f37a3e48a7daab4d19e4cf1,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 13.7
+      value: 13.700012
       objectReference: {fileID: 0}
     - target: {fileID: 224572348339932090, guid: 6c2b8ee08f37a3e48a7daab4d19e4cf1,
         type: 2}
@@ -33368,6 +33378,16 @@ Prefab:
     - target: {fileID: 4101359752437500, guid: 74c403d503f771c45b8eec28e474e8c4, type: 2}
       propertyPath: m_RootOrder
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 198358448420133328, guid: 74c403d503f771c45b8eec28e474e8c4,
+        type: 2}
+      propertyPath: InitialModule.startColor.minColor.a
+      value: 0.003921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 198358448420133328, guid: 74c403d503f771c45b8eec28e474e8c4,
+        type: 2}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.15294118
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74c403d503f771c45b8eec28e474e8c4, type: 2}
