@@ -139,7 +139,7 @@ public class InkTextObject : MonoBehaviour {
 	}
 
 	public void Start(){
-		if(!triggeredByObject) InteractWithText();
+		if(!triggeredByObject && GameManager.instance.GameChapter <= 6) InteractWithText();
 	}
 
 	public void Update(){
@@ -162,14 +162,16 @@ public class InkTextObject : MonoBehaviour {
 					hasEnded = true;
 
 					if(GameManager.instance.GameChapter == 5){
-						GameManager.instance.GameChapter++;
+						GameManager.instance.GameChapter = GameManager.instance.lastChapter;
+						repeat = true;
+						InteractWithText();
+						return;
 					}
 
 
 					if(GameManager.instance.GameChapter == 6 || GameManager.instance.GameChapter == 7){
 						SceneManager.LoadScene("Scene 2");
-						GameObject.Find("Cube").AddComponent<DestroyWhenNotInCamera>();
-						Credits.SetActive(true);
+						GameManager.instance.showCredits = true;
 					}
 				} 
 				break;
