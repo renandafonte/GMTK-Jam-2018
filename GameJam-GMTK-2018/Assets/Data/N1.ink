@@ -1,4 +1,4 @@
-Life… is an ephemerous entity.
+Life… is an ephemerous entity. #N1: som
 + [default] -> PART2
 
 === PART2 ===
