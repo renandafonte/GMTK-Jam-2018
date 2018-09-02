@@ -19,10 +19,33 @@ public class InkTextObject : MonoBehaviour {
 	private bool isPlayerAbleToSkipText = true;
 
 	public List<TextAsset> NextJsons;
-
+	public GameObject Credits;
     public void CallText(){
 		//Inicia classe story (veio do plugin do ink)
-		_story = new Story(JsonFromInk.text);
+		Debug.Log(GameManager.instance.GameChapter);
+		switch(GameManager.instance.GameChapter){
+			case 1:
+				_story = new Story(JsonFromInk.text);
+				break;
+			case 2:
+				_story = new Story(JsonFromInk.text);
+				break;
+			case 3:
+				_story = new Story(NextJsons[0].text);
+				break;
+			case 4:
+				_story = new Story(NextJsons[0].text);
+				break;
+			case 5:
+				_story = new Story(NextJsons[1].text);
+				break;
+			case 6:
+				_story = new Story(NextJsons[1].text);
+				break;
+			case 7:
+				_story = new Story(NextJsons[2].text);
+				break;
+		}
 		TextManager.instance.SetTextActive(true); //ativa a caixa de texto
 		AdvanceStory();
 	}
@@ -108,6 +131,10 @@ public class InkTextObject : MonoBehaviour {
 				else{
 					TextManager.instance.SetTextActive(false); //senão diálogo acabou
 					hasEnded = true;
+
+					if(GameManager.instance.GameChapter == 6 || GameManager.instance.GameChapter == 7){
+						Credits.SetActive(true);
+					}
 				} 
 				break;
 			case false:

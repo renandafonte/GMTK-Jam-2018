@@ -7,4 +7,8 @@ but you're just...
 
 === PART3 ===
 not getting it.
++ [default] -> PART4
+
+=== PART4 ===
+ #scene: "ArtScene 1"
 -> DONE

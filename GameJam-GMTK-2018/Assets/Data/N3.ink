@@ -1,8 +1,8 @@
-Have you noticed how ___[details]? 
+"Have you noticed how tall are these trees?
 + [default] -> PART2
 
 === PART2 ===
-How about how [details]? The tiniest details! 
+ And how about how distant and alien these rock structures are?  The tiniest details! 
 + [default] -> PART3
 
 === PART3 ===

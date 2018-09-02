@@ -9,11 +9,14 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 	public int GameChapter = 0;
     public GameObject pauseMenu;
+    public GameObject settingsMenu;
   //public AudioMixer audioSom;
     public float volume;
     public FirstPersonController FPC;
     public InkTextObject inkText;
+    public AudioSource PauseSound;
 
+    public int TextSize = 18;
 
 	public static GameManager instance;
 
@@ -31,13 +34,12 @@ public class GameManager : MonoBehaviour {
 	void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
 		GameChapter++;
-
-		switch(GameChapter){
-			case 2:
-				var obj = GameObject.Find("Managers").GetComponent<InkTextObject>();
-				obj.JsonFromInk = obj.NextJsons[0];
-				break;
-		}
+        InkTextObject obj;
+        CanvasInfo c = GameObject.Find("Canvas").GetComponent<CanvasInfo>();
+        pauseMenu = c.Pause;
+        pauseMenu.SetActive(false);
+        FirstPersonController fpc = c.fpc;
+        InkTextObject ink = c.inkText;
 	}
 
     void Update()
@@ -60,6 +62,7 @@ public class GameManager : MonoBehaviour {
     public void Resume()
     {
         Debug.Log("resume");
+        PauseSound.Play();
         pauseMenu.SetActive(false);
         FPC.disableFPC(true);
         inkText.disableInk(true);
@@ -69,12 +72,23 @@ public class GameManager : MonoBehaviour {
 
     void Pause()
     {
-      //Cursor.visible = true;
+        //Cursor.visible = true;
+        PauseSound.Play();
         pauseMenu.SetActive(true);
         FPC.disableFPC(false);
         inkText.disableInk(false);
         Time.timeScale = 0f;
 
+    }
+
+    public void Settings(){
+        pauseMenu.SetActive(false);
+        settingsMenu.SetActive(true);
+    }
+
+    public void BackToMenu(){
+        pauseMenu.SetActive(true);
+        settingsMenu.SetActive(false);
     }
 
     public void sceneQuit()
