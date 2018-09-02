@@ -40,6 +40,11 @@ public class GameManager : MonoBehaviour {
         pauseMenu.SetActive(false);
         FirstPersonController fpc = c.fpc;
         InkTextObject ink = c.inkText;
+
+        GameObject nextButton = GameObject.Find("Next");
+        if(GameChapter > 1 && nextButton != null){
+            nextButton.SetActive(false);
+        }
 	}
 
     void Update()

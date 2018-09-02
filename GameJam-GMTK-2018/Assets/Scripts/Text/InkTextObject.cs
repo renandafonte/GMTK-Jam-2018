@@ -133,6 +133,7 @@ public class InkTextObject : MonoBehaviour {
 					hasEnded = true;
 
 					if(GameManager.instance.GameChapter == 6 || GameManager.instance.GameChapter == 7){
+						gameObject.AddComponent<DestroyWhenNotInCamera>();
 						Credits.SetActive(true);
 					}
 				} 
