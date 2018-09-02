@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour {
 	public static GameManager instance;
     [HideInInspector] public int lastChapter;
 
+    [HideInInspector] public bool showCredits;
+
 	void Awake(){
 		DontDestroyOnLoad(gameObject);
 
@@ -44,7 +46,7 @@ public class GameManager : MonoBehaviour {
 
 		GameChapter++;
 
-        if(GameChapter == 6) GameChapter = lastChapter; //decide o final
+        //if(GameChapter == 6) GameChapter = lastChapter; //decide o final
 
         InkTextObject obj;
         CanvasInfo c = GameObject.Find("Canvas").GetComponent<CanvasInfo>();
@@ -54,6 +56,11 @@ public class GameManager : MonoBehaviour {
         InkTextObject ink = c.inkText;
 
         if(GameChapter > 1) ShowButton(false);
+
+        if(showCredits){
+            GameObject.Find("Canvas").transform.Find("Credits").gameObject.SetActive(true);
+			GameObject.Find("Cube").AddComponent<DestroyWhenNotInCamera>();
+        }
 	}
 
     public void ShowButton(bool status){
