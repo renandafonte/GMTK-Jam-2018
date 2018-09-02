@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 4621270733148696}
   - component: {fileID: 33872702645327226}
   - component: {fileID: 23545606902201554}
+  - component: {fileID: 136314217033613524}
   m_Layer: 0
   m_Name: Arbusto
   m_TagString: Untagged
@@ -159,7 +160,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1796871883048276}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 577, y: 0.39351624, z: 567.7}
+  m_LocalPosition: {x: 621.40063, y: 0.4142325, z: 696.74084}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4572430003848142}
@@ -435,3 +436,16 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!136 &136314217033613524
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1796871883048276}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 2
+  m_Height: 6
+  m_Direction: 0
+  m_Center: {x: -0.12747443, y: 0.012571457, z: 1.192541}
