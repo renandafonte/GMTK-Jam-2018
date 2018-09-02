@@ -36,13 +36,14 @@ public class ZoomCamera : MonoBehaviour {
             
 	}
 	void ZoomOut () {
-        if(Camera.current.fieldOfView <= 60.0)
-            Camera.current.fieldOfView += speedZoomIn;
+        if(Camera.main.fieldOfView <= 60.0)
+            Camera.main.fieldOfView += speedZoomIn;
 	}
 	
 	void ZoomIn () {
-        if (Camera.current.fieldOfView >= maxZoom)
-            Camera.current.fieldOfView -= speedZoomOut;	
+		Debug.Log(Camera.main);
+        if (Camera.main.fieldOfView >= maxZoom)
+            Camera.main.fieldOfView -= speedZoomOut;	
 	}
 
 	IEnumerator ControlStep(){

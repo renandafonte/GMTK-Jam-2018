@@ -83,7 +83,7 @@ public class InkTextObject : MonoBehaviour {
 				}
 
 				else if(myTagString[i].Contains("zoom")){
-					//camera.current.gameObject.AddComponent<ZoomCamera>();
+					Camera.main.gameObject.AddComponent<ZoomCamera>();
 				}
 
 				else if(myTagString[i].Contains("lockcam")){

@@ -38,6 +38,8 @@ public class GameManager : MonoBehaviour {
 
 	void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        if(SoundManager.instance != null) SoundManager.instance.UpdateAudioList();
+
 		GameChapter++;
         InkTextObject obj;
         CanvasInfo c = GameObject.Find("Canvas").GetComponent<CanvasInfo>();
