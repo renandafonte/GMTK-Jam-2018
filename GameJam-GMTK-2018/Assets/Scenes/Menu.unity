@@ -963,7 +963,7 @@ Prefab:
     - target: {fileID: 114081690917713538, guid: 27c5ada879a151c49bf3cd79135f4e7e,
         type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224322718933029072, guid: 27c5ada879a151c49bf3cd79135f4e7e,
         type: 2}
@@ -1068,18 +1068,23 @@ Prefab:
     - target: {fileID: 114081690917713538, guid: 27c5ada879a151c49bf3cd79135f4e7e,
         type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114081690917713538, guid: 27c5ada879a151c49bf3cd79135f4e7e,
         type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: UnityEngine.UI.Slider, UnityEngine.UI
       objectReference: {fileID: 0}
     - target: {fileID: 114081690917713538, guid: 27c5ada879a151c49bf3cd79135f4e7e,
         type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114081690917713538, guid: 27c5ada879a151c49bf3cd79135f4e7e,
+        type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1598128290}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27c5ada879a151c49bf3cd79135f4e7e, type: 2}
   m_IsPrefabAsset: 0
@@ -1221,6 +1226,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224322718933029072, guid: 27c5ada879a151c49bf3cd79135f4e7e,
     type: 2}
   m_PrefabInternal: {fileID: 924398041}
+--- !u!114 &1598128290 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114081690917713538, guid: 27c5ada879a151c49bf3cd79135f4e7e,
+    type: 2}
+  m_PrefabInternal: {fileID: 924398041}
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1732756028
 GameObject:
   m_ObjectHideFlags: 0
