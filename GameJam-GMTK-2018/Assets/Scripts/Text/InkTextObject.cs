@@ -20,6 +20,9 @@ public class InkTextObject : MonoBehaviour {
 
 	public List<TextAsset> NextJsons;
 	public GameObject Credits;
+	public float MaxTextDuration = 3;
+
+	private bool playerHasSkipped = false;
     public void CallText(){
 		//Inicia classe story (veio do plugin do ink)
 		Debug.Log(GameManager.instance.GameChapter);
@@ -148,6 +151,7 @@ public class InkTextObject : MonoBehaviour {
 		}
 
 		StartCoroutine(SkipTextCooldown());
+		StartCoroutine(AutoSkipText());
 	}
 
     public void tocaPlay(string audioNom)
@@ -168,6 +172,14 @@ public class InkTextObject : MonoBehaviour {
 		isPlayerAbleToSkipText = false;
 		yield return new WaitForSeconds(TimeBeforePlayerIsAbleToSkipText);
 		isPlayerAbleToSkipText = true;
+	}
+
+	IEnumerator AutoSkipText(){
+		yield return new WaitForSeconds(MaxTextDuration);
+		if(!playerHasSkipped){
+			InteractWithText();
+		}
+		playerHasSkipped = false;
 	}
 
     public void disableInk(bool x)
