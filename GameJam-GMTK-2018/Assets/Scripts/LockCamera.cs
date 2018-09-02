@@ -9,6 +9,8 @@ public class LockCamera : MonoBehaviour {
 	[HideInInspector]public FirstPersonController camera;
 	[Range(0,1000)]public float speed = 300f;
 
+	private bool movedMouse = false;
+
 	private bool _preparingLookAt = false;
 
 	public void OnEnable(){
@@ -19,9 +21,12 @@ public class LockCamera : MonoBehaviour {
  		return cam.ScreenToViewportPoint(new Vector3(cam.pixelWidth/2, cam.pixelHeight/2, cam.transform.position.z));
 	}
 
-	public void UnlockPosition(){
+	public bool UnlockPosition(){
 		objToLock = null;
+		return movedMouse;
 	}
+
+
 	
 	// Update is called once per frame
 	void LateUpdate () {
@@ -34,6 +39,9 @@ public class LockCamera : MonoBehaviour {
 		if(Mathf.Max(Mathf.Abs(Input.GetAxis("Mouse X")), 
 					Mathf.Abs(Input.GetAxis("Mouse Y"))) > 0.5){
 			camera.enabled = true;
+			movedMouse = true;
 		}
+
+
 	}
 }
