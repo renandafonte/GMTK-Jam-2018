@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -64,7 +65,7 @@ public class InkTextObject : MonoBehaviour {
             for (int i = 0; i < myTagString.Count; i++)
             {
 				if(myTagString[i].Contains("som")){
-                    tocaPlay(myTagString[0]);
+                    //tocaPlay(myTagString[0]);
                     //Debug.Log(GetTagArgument(myTagString[0]));
 					if (tagTemp == "")
 						tagTemp = GetTagArgument(myTagString[i]);
@@ -83,6 +84,13 @@ public class InkTextObject : MonoBehaviour {
 
 				else if(myTagString[i].Contains("scene")){
 					SceneManager.LoadScene(GetTagArgument(myTagString[i]));
+				}
+
+				else if(myTagString[i].Contains("tempo")){
+					tagTemp = GetTagArgument(myTagString[i]);
+
+					int tempo = Int32.Parse(tagTemp);
+					MaxTextDuration = tempo;
 				}
 
 				else if(myTagString[i].Contains("zoomin")){
@@ -127,7 +135,7 @@ public class InkTextObject : MonoBehaviour {
 	}
 
 	public void OnMouseDown(){
-		if(triggeredByObject) InteractWithText();
+		//if(triggeredByObject) InteractWithText();
 	}
 
 	public void Start(){
@@ -135,7 +143,7 @@ public class InkTextObject : MonoBehaviour {
 	}
 
 	public void Update(){
-		if(Input.GetMouseButton(0) && !triggeredByObject) InteractWithText();
+		//if(Input.GetMouseButton(0) && !triggeredByObject) InteractWithText();
 	}
 
 	public void InteractWithText(){
