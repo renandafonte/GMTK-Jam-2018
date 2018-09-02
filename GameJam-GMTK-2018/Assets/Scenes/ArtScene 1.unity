@@ -20907,6 +20907,9 @@ MonoBehaviour:
   repeat: 0
   triggeredByObject: 0
   TimeBeforePlayerIsAbleToSkipText: 1
+  NextJsons:
+  - {fileID: 4900000, guid: 7b3d559be34565c4baf771f7f8123699, type: 3}
+  - {fileID: 4900000, guid: 7b37d148f0f87b74ab71b0bf2e9a270e, type: 3}
 --- !u!1001 &1048502397
 Prefab:
   m_ObjectHideFlags: 0
@@ -27274,7 +27277,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1358420758
 Prefab:
