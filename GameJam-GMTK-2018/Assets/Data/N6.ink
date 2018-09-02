@@ -14,5 +14,5 @@ Yknow what, fine, you want to finish the game so bad?
  + [default] -> PART5
 
 === PART5 ===
-You want to go to that next scene so bad?
+You want to go to that next scene so bad? WELL FINE!
 -> DONE
