@@ -43,9 +43,9 @@ public class GameManager : MonoBehaviour {
 	}
 
     public void ShowButton(bool status){
-        GameObject nextButton = GameObject.Find("Next");
+        Transform nextButton = GameObject.Find("Canvas").transform.Find("Next");
         if(nextButton != null){
-            nextButton.SetActive(false);
+            nextButton.gameObject.SetActive(status);
         }
     }
 
