@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Ink.Runtime;
 
 public class InkTextObject : MonoBehaviour {
@@ -32,21 +33,31 @@ public class InkTextObject : MonoBehaviour {
 
             if (myTagString.Count > 0)
             {
-                if (tagTemp == "")
-                    tagTemp = myTagString[0];
-                else
-                {
-                    if (tagTemp != myTagString[0])
-                    {
-                        tocaPlayStop(tagTemp);
-                        tagTemp = myTagString[0];
-                    }
-                }
-                
-                //Debug.Log(myTagString[0]);
-                tocaPlay(myTagString[0]);
+				if(myTagString[0].Contains("som")){
+					if (tagTemp == "")
+						tagTemp = GetTagArgument(myTagString[0]);
+					else
+					{
+						if (tagTemp != GetTagArgument(myTagString[0]))
+						{
+							tocaPlayStop(tagTemp);
+							tagTemp = GetTagArgument(myTagString[0]);
+						}
+					}
+					
+					//Debug.Log(myTagString[0]);
+					tocaPlay(GetTagArgument(myTagString[0]));
+				}
+
+				else if(myTagString[0].Contains("scene")){
+					SceneManager.LoadScene(GetTagArgument(myTagString[0]));
+				}
             }
         }
+	}
+
+	public string GetTagArgument(string tag){
+		return tag.Substring(tag.IndexOf('\"') + 1, tag.LastIndexOf('\"') - tag.IndexOf('\"') - 1);
 	}
 
 	public void ChooseChoice(string name){

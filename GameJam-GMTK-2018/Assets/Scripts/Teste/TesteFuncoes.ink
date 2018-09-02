@@ -3,7 +3,7 @@ Comeco
 + [default] -> som
 
 ==som==
-Vai tocar algo #speaker2
+Vai tocar algo #som: "speaker2"
 + [default] -> fim
 
 ==fim==
