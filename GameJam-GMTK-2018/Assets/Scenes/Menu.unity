@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.33187, g: 0.259419, b: 0.24844106, a: 1}
+  m_IndirectSpecularColor: {r: 0.33186993, g: 0.2594187, b: 0.24844368, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1118,6 +1118,7 @@ MonoBehaviour:
   BGMVolume: 1
   SFXVolume: 1
   ambientVolume: 1
+  voiceVolume: 1
 --- !u!4 &973372604
 Transform:
   m_ObjectHideFlags: 0
@@ -1164,7 +1165,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -235.6, y: -48.2}
+  m_AnchoredPosition: {x: -235.6, y: -41.65}
   m_SizeDelta: {x: 1253.48, y: 271.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1035648658
@@ -1188,7 +1189,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: df9ac8bc4a1867b43b05350f1eac2e51, type: 3}
-    m_FontSize: 100
+    m_FontSize: 107
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -1199,7 +1200,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Contemplation
+  m_Text: Contemplate
 --- !u!222 &1035648659
 CanvasRenderer:
   m_ObjectHideFlags: 0
