@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour {
     public GameObject pauseMenu;
     public GameObject settingsMenu;
   //public AudioMixer audioSom;
-    public float volume;
     public InkTextObject inkText;
 
     public int TextSize = 18;
@@ -31,6 +30,8 @@ public class GameManager : MonoBehaviour {
 
 	void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        SoundManager.instance.UpdateAudioList();
+
 		GameChapter++;
         InkTextObject obj;
         CanvasInfo c = GameObject.Find("Canvas").GetComponent<CanvasInfo>();
