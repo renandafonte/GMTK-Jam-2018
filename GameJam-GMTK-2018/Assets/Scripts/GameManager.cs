@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour {
 
     public int TextSize = 18;
 
+    [HideInInspector] public AudioSource activeAudio;
+
 	public static GameManager instance;
     [HideInInspector] public int lastChapter;
 
@@ -99,6 +101,7 @@ public class GameManager : MonoBehaviour {
         fpc.disableFPC(true);
         if(inkText != null) inkText.disableInk(true);
         Time.timeScale = 1f;
+        if(activeAudio != null) activeAudio.UnPause();
 
     }
 
@@ -110,6 +113,8 @@ public class GameManager : MonoBehaviour {
         GameObject.Find("FPSController").GetComponent<FirstPersonController>().disableFPC(false);
         if(inkText != null) inkText.disableInk(false);
         Time.timeScale = 0f;
+
+        if(activeAudio != null) activeAudio.Pause();
 
     }
 

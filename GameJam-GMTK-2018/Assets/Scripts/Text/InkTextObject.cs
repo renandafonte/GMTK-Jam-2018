@@ -47,10 +47,10 @@ public class InkTextObject : MonoBehaviour {
 				_story = new Story(NextJsons[1].text);
 				break;
 			case 6:
-				_story = new Story(NextJsons[1].text);
+				_story = new Story(NextJsons[2].text);
 				break;
 			case 7:
-				_story = new Story(NextJsons[2].text);
+				_story = new Story(NextJsons[3].text);
 				break;
 		}
 		TextManager.instance.SetTextActive(true); //ativa a caixa de texto
@@ -158,10 +158,17 @@ public class InkTextObject : MonoBehaviour {
 				} 
 				else{
 					TextManager.instance.SetTextActive(false); //senão diálogo acabou
+					GameManager.instance.activeAudio = null;
 					hasEnded = true;
 
+					if(GameManager.instance.GameChapter == 5){
+						GameManager.instance.GameChapter++;
+					}
+
+
 					if(GameManager.instance.GameChapter == 6 || GameManager.instance.GameChapter == 7){
-						gameObject.AddComponent<DestroyWhenNotInCamera>();
+						SceneManager.LoadScene("Scene 2");
+						GameObject.Find("Cube").AddComponent<DestroyWhenNotInCamera>();
 						Credits.SetActive(true);
 					}
 				} 
@@ -181,6 +188,7 @@ public class InkTextObject : MonoBehaviour {
         AudioSource audio = GameObject.Find(audioNom).GetComponent<AudioSource>();
         Debug.Log(audio);
         audio.Play();
+		GameManager.instance.activeAudio = audio;
     }
 
     public void tocaPlayStop(string audioNom)
