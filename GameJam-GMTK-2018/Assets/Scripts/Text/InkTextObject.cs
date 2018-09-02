@@ -20,9 +20,12 @@ public class InkTextObject : MonoBehaviour {
 
 	public List<TextAsset> NextJsons;
 	public GameObject Credits;
+	public Transform locktarget;
 	public float MaxTextDuration = 3;
 
 	private bool playerHasSkipped = false;
+	private ZoomCamera zoom;
+	private LockCamera lockCam;
     public void CallText(){
 		//Inicia classe story (veio do plugin do ink)
 		Debug.Log(GameManager.instance.GameChapter);
@@ -82,12 +85,22 @@ public class InkTextObject : MonoBehaviour {
 					SceneManager.LoadScene(GetTagArgument(myTagString[i]));
 				}
 
-				else if(myTagString[i].Contains("zoom")){
-					Camera.main.gameObject.AddComponent<ZoomCamera>();
+				else if(myTagString[i].Contains("zoomin")){
+					zoom = Camera.main.transform.parent.gameObject.AddComponent<ZoomCamera>();
+				}
+
+				else if(myTagString[i].Contains("zoomout")){
+					zoom.StartZoomOut();
+				}
+
+				else if(myTagString[i].Contains("unlockcam")){
+					lockCam.UnlockPosition();
+
 				}
 
 				else if(myTagString[i].Contains("lockcam")){
-					Debug.Log("TODO LOCKCAM");
+					lockCam = Camera.main.transform.parent.gameObject.AddComponent<LockCamera>();
+					lockCam.objToLock = locktarget;
 				}
 
 				else if(myTagString[i].Contains("showButton")){

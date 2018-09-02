@@ -6,7 +6,7 @@
  + [default] -> PART3
 
 === PART3 ===
- let me just teach you how to properly play an art piece. #zoom #lockcam
+ let me just teach you how to properly play an art piece. #lockcam #zoomin
 + [default] -> PART4
 
 === PART4 ===
@@ -18,7 +18,7 @@ How amazingly textured it is, with all the perfect details and perfect assymetry
 + [default] -> PART6
 
 === PART6 ===
-THAT is the flower I meant, did you actually notice it the first time? 
+THAT is the flower I meant, did you actually notice it the first time? #unlockcam #zoomout
 + [default] -> PART7
 
 === PART7 ===
