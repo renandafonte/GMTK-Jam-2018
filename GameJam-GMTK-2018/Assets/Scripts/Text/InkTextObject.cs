@@ -116,4 +116,9 @@ public class InkTextObject : MonoBehaviour {
 		yield return new WaitForSeconds(TimeBeforePlayerIsAbleToSkipText);
 		isPlayerAbleToSkipText = true;
 	}
+
+    public void disableInk(bool x)
+    {
+        GetComponent<InkTextObject>().enabled = x;
+    }
 }
