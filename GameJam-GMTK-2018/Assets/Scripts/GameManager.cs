@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour {
 
 	void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        SoundManager.instance.UpdateAudioList();
+        if(SoundManager.instance != null) SoundManager.instance.UpdateAudioList();
 
 		GameChapter++;
         InkTextObject obj;
