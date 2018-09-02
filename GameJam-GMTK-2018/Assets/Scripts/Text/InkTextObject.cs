@@ -65,15 +65,15 @@ public class InkTextObject : MonoBehaviour {
             for (int i = 0; i < myTagString.Count; i++)
             {
 				if(myTagString[i].Contains("som")){
-                    tocaPlay(NomeAudio(myTagString[0]));
+                    tocaPlay(NomeAudio(myTagString[i]));
                     //Debug.Log(GetTagArgument(myTagString[0]));
-					if (tagTemp == "")
-						tagTemp = GetTagArgument(myTagString[i]);
+					if (tagTemp == ""){
+						tagTemp = GetTagArgument(myTagString[i]);}
 					else
 					{
 						if (tagTemp != GetTagArgument(myTagString[i]))
 						{
-							tocaPlayStop(tagTemp);
+							tocaPlayStop(NomeAudio(myTagString[i]));
 							tagTemp = GetTagArgument(myTagString[i]);
 						}
 					}
@@ -119,6 +119,10 @@ public class InkTextObject : MonoBehaviour {
 	}
 
 	public string GetTagArgument(string tag){
+		if(tag.LastIndexOf('\"') - tag.IndexOf('\"') - 1 < 0){
+			return null;
+		}
+
 		return tag.Substring(tag.IndexOf('\"') + 1, tag.LastIndexOf('\"') - tag.IndexOf('\"') - 1);
 	}
 
@@ -186,7 +190,6 @@ public class InkTextObject : MonoBehaviour {
 
     public void tocaPlay(string audioNom)
     {
-        Debug.Log(audioNom);
         AudioSource audio = GameObject.Find(audioNom).GetComponent<AudioSource>();
         Debug.Log(audio);
         audio.Play();
@@ -195,6 +198,7 @@ public class InkTextObject : MonoBehaviour {
 
     public void tocaPlayStop(string audioNom)
     {
+        Debug.Log(audioNom);
         AudioSource audio = GameObject.Find(audioNom).GetComponent<AudioSource>();
         audio.Stop();
     }
@@ -220,6 +224,7 @@ public class InkTextObject : MonoBehaviour {
 
     private string NomeAudio(string arquiv)
     {
+		Debug.Log(arquiv);
         if (arquiv.Contains("N1"))
             return "N1";
         else if (arquiv.Contains("N2"))
