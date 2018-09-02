@@ -12,17 +12,7 @@ MonoBehaviour:
   m_Name: Default
   m_EditorClassIdentifier: 
   prefabs:
-  - gameObject: {fileID: 1796871883048276, guid: 926c29586a5f53e4f91f9be0d63a05d6,
-      type: 2}
-    settings:
-      rotationRange: {x: 0, y: 0}
-      scaleRange: {x: 0, y: 0}
-  - gameObject: {fileID: 1236409476744076, guid: bd9bd7ff751bb4541925967922a2efba,
-      type: 2}
-    settings:
-      rotationRange: {x: 0, y: 0}
-      scaleRange: {x: 0, y: 0}
-  - gameObject: {fileID: 1211833492370544, guid: 66473515f9ee87c4bbf89e7bdcbe3d45,
+  - gameObject: {fileID: 1116122200022900, guid: cbdfad59d63407c42aad85aa5a285cc5,
       type: 2}
     settings:
       rotationRange: {x: 0, y: 0}
