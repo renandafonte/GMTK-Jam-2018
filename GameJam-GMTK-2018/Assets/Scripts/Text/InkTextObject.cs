@@ -9,6 +9,9 @@ public class InkTextObject : MonoBehaviour {
     List<string> myTagString;
     string tagTemp = "";
 
+	public bool repeat = false;
+	private bool hasEnded = false;
+
     public void CallText(){
 		//Inicia classe story (veio do plugin do ink)
 		_story = new Story(JsonFromInk.text);
@@ -62,10 +65,13 @@ public class InkTextObject : MonoBehaviour {
 					_story.ChooseChoiceIndex(index); //se estiver escolhas muda o texto
 					AdvanceStory();
 				} 
-				else TextManager.instance.SetTextActive(false); //senão diálogo acabou
+				else{
+					TextManager.instance.SetTextActive(false); //senão diálogo acabou
+					hasEnded = true;
+				} 
 				break;
 			case false:
-				CallText();
+				if(!hasEnded || repeat) CallText();
 				break;
 		}
 	}
