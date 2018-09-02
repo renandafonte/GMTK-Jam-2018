@@ -1,11 +1,3 @@
- Come on, since I'm starting to doubt you have the capacity 
- + [default] -> PART2
-
-=== PART2 ===
- to understand what I'm saying if I keep trying to be subtle, 
- + [default] -> PART3
-
-=== PART3 ===
  let me just teach you how to properly play an art piece. #lockcam #zoomin
 + [default] -> PART4
 
