@@ -85,6 +85,10 @@ public class InkTextObject : MonoBehaviour {
 				else if(myTagString[0].Contains("lockcam")){
 					Debug.Log("TODO LOCKCAM");
 				}
+
+				else if(myTagString[0].Contains("showButton")){
+					GameManager.instance.ShowButton(true);
+				}
             }
         }
 	}

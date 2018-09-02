@@ -12,9 +12,7 @@ public class GameManager : MonoBehaviour {
     public GameObject settingsMenu;
   //public AudioMixer audioSom;
     public float volume;
-    public FirstPersonController FPC;
     public InkTextObject inkText;
-    public AudioSource PauseSound;
 
     public int TextSize = 18;
 
@@ -41,11 +39,15 @@ public class GameManager : MonoBehaviour {
         FirstPersonController fpc = c.fpc;
         InkTextObject ink = c.inkText;
 
+        if(GameChapter > 1) ShowButton(false);
+	}
+
+    public void ShowButton(bool status){
         GameObject nextButton = GameObject.Find("Next");
-        if(GameChapter > 1 && nextButton != null){
+        if(nextButton != null){
             nextButton.SetActive(false);
         }
-	}
+    }
 
     void Update()
     {
@@ -67,10 +69,10 @@ public class GameManager : MonoBehaviour {
     public void Resume()
     {
         Debug.Log("resume");
-        PauseSound.Play();
+        GameObject.Find("Pause Menu Audio").GetComponent<AudioSource>().Play();
         pauseMenu.SetActive(false);
-        FPC.disableFPC(true);
-        inkText.disableInk(true);
+        GameObject.Find("FPSController").GetComponent<FirstPersonController>().disableFPC(true);
+        if(inkText != null) inkText.disableInk(true);
         Time.timeScale = 1f;
 
     }
@@ -78,10 +80,10 @@ public class GameManager : MonoBehaviour {
     void Pause()
     {
         //Cursor.visible = true;
-        PauseSound.Play();
+        GameObject.Find("Pause Menu Audio").GetComponent<AudioSource>().Play();
         pauseMenu.SetActive(true);
-        FPC.disableFPC(false);
-        inkText.disableInk(false);
+        GameObject.Find("FPSController").GetComponent<FirstPersonController>().disableFPC(false);
+        if(inkText != null) inkText.disableInk(false);
         Time.timeScale = 0f;
 
     }
