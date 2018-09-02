@@ -102,7 +102,7 @@ public class InkTextObject : MonoBehaviour {
 				}
 
 				else if(myTagString[i].Contains("unlockcam")){
-					lockCam.UnlockPosition();
+					GameManager.instance.lastChapter = lockCam.UnlockPosition() ? 6 : 7;
 
 				}
 
