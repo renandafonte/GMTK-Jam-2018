@@ -28887,7 +28887,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1920756163968368, guid: 5384970acfdffc04eafc617f712e1b5d, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114147162103528716, guid: 5384970acfdffc04eafc617f712e1b5d,
         type: 2}
@@ -28907,7 +28907,7 @@ Prefab:
     - target: {fileID: 114147162103528716, guid: 5384970acfdffc04eafc617f712e1b5d,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Resume
+      value: sceneQuit
       objectReference: {fileID: 0}
     - target: {fileID: 114147162103528716, guid: 5384970acfdffc04eafc617f712e1b5d,
         type: 2}
@@ -28932,7 +28932,7 @@ Prefab:
     - target: {fileID: 114310752762167518, guid: 5384970acfdffc04eafc617f712e1b5d,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: sceneQuit
+      value: Resume
       objectReference: {fileID: 0}
     - target: {fileID: 114310752762167518, guid: 5384970acfdffc04eafc617f712e1b5d,
         type: 2}
