@@ -130,7 +130,6 @@ public class InkTextObject : MonoBehaviour {
 		switch(TextManager.instance.DialogObj.IsActive()){
 			case true:
 				int index = SearchChoice("default");
-				Debug.Log(index);
 				if(_story.currentChoices.Count > 0 && index != -1){
 					_story.ChooseChoiceIndex(index); //se estiver escolhas muda o texto
 					AdvanceStory();
