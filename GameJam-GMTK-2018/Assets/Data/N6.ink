@@ -1,4 +1,5 @@
-You want to go to that next scene so bad? #som: "N6" #time: "1"
+#som: "N6"
+You want to go to that next scene so bad?  #time: "1"
  + [default] -> PART2
 
 === PART2 ===
