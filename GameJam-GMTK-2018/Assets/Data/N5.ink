@@ -1,4 +1,4 @@
- let me just teach you how to properly play an art piece. #lockcam #zoomin
+ let me just teach you how to properly play an art piece. #lockcam #zoomin #som: "N5"
 + [default] -> PART4
 
 === PART4 ===
