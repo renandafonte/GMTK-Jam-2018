@@ -3,7 +3,7 @@ Have you noticed how tall are these trees? #tempo: "3"
 + [default] -> PART2
 
 === PART2 ===
- And how about how distant and alien these rock structures are?  The tiniest details! #tempo: "5"
+ And how about how distant and alien these rock structures are?  The tiniest details! #tempo: "6"
 + [default] -> PART3
 
 === PART3 ===
@@ -11,7 +11,7 @@ It really goes to show how the most minute and beautiful things go unappreciated
 + [default] -> PART4
 
 === PART4 ===
-with such themes and messages that only under absolute scrutiny and analysis, #showButton #tempo: "6"
+with such themes and messages that only under absolute scrutiny and analysis, #showButton #tempo: "4"
 + [default] -> PART5
 
 === PART5 ===
@@ -43,5 +43,5 @@ So… let's try this again. #tempo: "3"
 + [default] -> PART12
 
 === PART12 ===
-Want to look around? This time, please, look deep into the details.#tempo: "4" 
+Want to look around? This time, please, look deep into the details.#tempo: "7" 
 -> DONE

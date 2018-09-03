@@ -1,9 +1,9 @@
 #som: "N4"
-Okay, I KNOW it's tantalizing to try to play this game like any other common one out there,  #tempo: "5"
+Okay, I KNOW it's tantalizing to try to play this game like any other common one out there,  #tempo: "6"
 + [default] -> PART2
 
 === PART2 ===
-but you're just... #tempo: "1"
+but you're just... #tempo: "2"
 + [default] -> PART3
 
 === PART3 ===
