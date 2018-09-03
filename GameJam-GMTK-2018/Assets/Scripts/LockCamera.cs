@@ -40,7 +40,6 @@ public class LockCamera : MonoBehaviour {
 					Mathf.Abs(Input.GetAxis("Mouse Y"))) > 0.5){
 			camera.enabled = true;
 			movedMouse = true;
-			UnlockPosition();
 		}
 
 
