@@ -29,7 +29,6 @@ public class InkTextObject : MonoBehaviour {
 	private LockCamera lockCam;
     public void CallText(){
 		//Inicia classe story (veio do plugin do ink)
-		Debug.Log(GameManager.instance.GameChapter);
 		switch(GameManager.instance.GameChapter){
 			case 1:
 				_story = new Story(JsonFromInk.text);
@@ -73,7 +72,7 @@ public class InkTextObject : MonoBehaviour {
 					{
 						if (tagTemp != GetTagArgument(myTagString[i]))
 						{
-							tocaPlayStop(NomeAudio(myTagString[i]));
+							tocaPlayStop(NomeAudio(tagTemp));
 							tagTemp = GetTagArgument(myTagString[i]);
 						}
 					}
@@ -199,8 +198,11 @@ public class InkTextObject : MonoBehaviour {
     public void tocaPlayStop(string audioNom)
     {
         Debug.Log(audioNom);
-        AudioSource audio = GameObject.Find(audioNom).GetComponent<AudioSource>();
-        audio.Stop();
+		GameObject audioHolder = GameObject.Find(audioNom);
+        if(audioHolder != null) {
+			AudioSource audio = audioHolder.GetComponent<AudioSource>();
+        	audio.Stop();
+		}
     }
 
 	IEnumerator SkipTextCooldown(){

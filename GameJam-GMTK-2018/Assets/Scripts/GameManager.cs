@@ -64,15 +64,13 @@ public class GameManager : MonoBehaviour {
 	}
 
     public void ShowButton(bool status){
-        Transform nextButton = GameObject.Find("Canvas").transform.Find("Next");
+        Transform nextButton = GameObject.Find("Canvas").transform.Find("Next"); 
         
-        if(GameManager.instance.GameChapter >= 5){
-            nextButton.gameObject.SetActive(false);
-            return;
-        } 
-
-        
-        if(nextButton != null){
+        if(nextButton != null){            
+            if(GameManager.instance.GameChapter >= 5){
+                nextButton.gameObject.SetActive(false);
+                return;
+            }
             nextButton.gameObject.SetActive(status);
         }
     }
